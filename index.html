@@ -12,6 +12,27 @@
             animation: text-pop-up-top .5s cubic-bezier(.25, .46, .45, .94) both
         }
 
+        @media (max-width: 400px) {
+            .text-pop-up-top {
+                animation: text-pop-up-top400 .5s cubic-bezier(.25, .46, .45, .94) both
+            }
+
+        }
+
+        @keyframes text-pop-up-top400 {
+            0% {
+                transform: translateY(0);
+                transform-origin: 50% 50%;
+                text-shadow: none
+            }
+
+            100% {
+                transform: translateY(-200px);
+                transform-origin: 50% 50%;
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 2px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 50px 30px rgba(0, 0, 0, .3)
+            }
+        }
+
         @keyframes text-pop-up-top {
             0% {
                 transform: translateY(0);
@@ -22,9 +43,10 @@
             100% {
                 transform: translateY(-150px);
                 transform-origin: 50% 50%;
-                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 50px 30px rgba(0, 0, 0, .3)
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 2px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 50px 30px rgba(0, 0, 0, .3)
             }
         }
+
 
         /* fade in */
         .puff-in-center {
@@ -85,294 +107,267 @@
 </head>
 
 <body class="bg-black">
-    <main class="flex flex-col items-center text-white">
-        <div class="text-xl mt-10">
-            <span class="text-blue-300">class</span> Rodrigo {
-            <div>
-                <p class="ml-7">
-                    <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> nome = "Rodrigo
-                    Barbosa Bertini";
-                </p>
-                <p class="ml-7">
-                    <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> ocupacao =
-                    "Desenvolvedor full stack";
-                </p>
-            </div>
-            }
-        </div>
-        <div class="flex flex-col items-center">
-            <div class="flex justify-center w-96" id="hello">
-                <h1 class="font-bold text-xl absolute">HELLO WORLD!</h1>
-            </div>
-            <header>
-                <nav class="hidden space-x-10 lg:flex">
-                    <a id="about" href="#"
-                        class="text-lg font-semibold hover:text-indigo-500 active:text-indigo-700 text-indigo-500 nav nav-active">Sobre
-                        mim</a>
-                    <a id="experience" href="#"
-                        class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Experiencias</a>
-                    <!-- <a id="fazer" href="#"
-                        class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">O
-                        que posso fazer</a> -->
-                    <a id="contato" href="#"
-                        class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Contatos</a>
-                </nav>
-            </header>
-            <div class="w-[80%]">
-                <!-- Pagina 4 -->
-                <div id="nav-contato" class="hidden nav-body max-w-max">
-                    <p>Meus contatos</p>
-                    <div>
-                        <p>Email: rodbberz@gmail.com</p>
-                        <p class="flex">linkedin: <a href="https://www.linkedin.com/in/rodrigo-barbosa-bertini/"
-                                target="_blank"
-                                class="ml-2 hover:text-blue-300">https://www.linkedin.com/in/rodrigo-barbosa-bertini/</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- Fim pagina 4 -->
-                <!-- Pagina 3 -->
-                <!-- <div id="nav-fazer" class="hidden nav-body max-w-max">
-                    <p>Aqui vou deixar pequenos exemplos de como posso trabalhar</p>
-                    <div>
-
-                        <button id="atividades" data-dropdown-toggle="dropdown-atividades"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button">Selecione <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg></button>
-                        <div id="dropdown-atividades"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="atividades">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forms</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tables</a>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                    </div>
-                </div> -->
-                <!-- Fim pagina 3 -->
-                <!-- Pagina 1 -->
-                <div id="nav-about" class="puff-in-center nav-body max-w-max">
-                    <p>
-                        Olá, sou um desenvolvedor full stack e também mobile, como experiencia de 2+ anos no mercado,
-                        trabalhando em mais de um projeto, front-end, back-end, e mobile. Bom em criar e utilizar componentes no front, trabalhar com classes e ORM e criar APIs no backend. Buscando sempre melhorar e
-                        adquirir novos conhecimentos para
-                        desenvolvimento tanto profissional quanto pessoal.
+    <div class="h-screen w-screen">
+        <main class="flex flex-col items-center text-white flex-1">
+            <div class="text-xl mt-10">
+                <span class="text-blue-300">class</span> Rodrigo {
+                <div>
+                    <p class="ml-7">
+                        <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> nome =
+                        "Rodrigo
+                        Barbosa Bertini";
+                    </p>
+                    <p class="ml-7">
+                        <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> ocupacao =
+                        "Desenvolvedor full stack";
                     </p>
                 </div>
-                <!-- Fim pagina 1 -->
-                <!-- Pagina 2 -->
-                <div id="nav-experience" class="hidden nav-body max-w-max">
-                    <div class="mb-5">
-                        <p class="font-bold">De forma resumida tenho experiência pratica no desenvolvimento de sistemas
-                            utilizando:</p>
-                        <p>HTML, CSS, JavaScript, Tailwind CSS, Vuejs, Bootstrap, PHP, Laravel</p>
-                        <p class="font-bold">O que estou estudando e desenvolvendo minhas habilidades em projetos
-                            pessoais:</p>
-                        <p>Golang (Gin e Gorm), Java (Spring boot), Python (Django), C# (.Net), Electron</p>
+                }
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="flex justify-center w-96" id="hello">
+                    <h1 class="font-bold text-xl absolute">HELLO WORLD!</h1>
+                </div>
+                <header>
+                    <nav class="space-x-10 flex">
+                        <a id="about" href="#"
+                            class="text-lg font-semibold hover:text-indigo-500 active:text-indigo-700 text-indigo-500 nav nav-active">Sobre
+                            mim</a>
+                        <a id="experience" href="#"
+                            class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Experiencias</a>
+                        <!-- <a id="fazer" href="#"
+                            class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">O
+                            que posso fazer</a> -->
+                        <a id="contato" href="#"
+                            class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Contatos</a>
+                    </nav>
+                </header>
+                <div class="w-[80%]">
+                    <!-- Pagina 4 -->
+                    <div id="nav-contato" class="hidden nav-body max-w-max">
+                        <p>Meus contatos</p>
+                        <div>
+                            <p>Email: rodbberz@gmail.com</p>
+                            <p class="flex">linkedin: <a href="https://www.linkedin.com/in/rodrigo-barbosa-bertini/"
+                                    target="_blank"
+                                    class="ml-2 hover:text-blue-300">https://www.linkedin.com/in/rodrigo-barbosa-bertini/</a>
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <span class="font-bold">Experiencia profissional</span>
-                        <div class="ml-3 h-[16rem] overflow-auto scroll-style">
-                            <div>
-                                <p>
-                                    No meu periodo de estagiario, participei de um projeto de controle de empresa de
-                                    proteção
-                                    veicular, onde o sistema tinha diversos módulos e necessitava de manutenção,
-                                    correção de
-                                    bugs e
-                                    aprimoramento, ajudei a equipe a implementar novos modulos, e trabalhava tanto no
-                                    front-end,
-                                    back-end e banco de dados.
-                                <p class="font-bold">Tecnologias utilizadas</p>
-                                <div class="ml-3">
-                                    <p class="font-bold">Front-end:</p>
-                                    <p>HTML, CSS, Bootstrap 4, JavaScript, Jquery, DataTables</p>
-                                    <p class="font-bold">Back-end:</p>
-                                    <p>PHP</p>
-                                    <p class="font-bold">Banco de dados:</p>
-                                    <p>MySQL</p>
-                                </div>
-                                </p>
-                            </div>
-                            <div>
-                                <h1 class="font-bold">Como desenvolvedor full stack fiz parte no desenvolvimento de 3
-                                    sistemas para empresa:</h1>
-                                <ul class="space-y-3">
+                    <!-- Fim pagina 4 -->
+                    <!-- Pagina 3 -->
+                    <!-- <div id="nav-fazer" class="hidden nav-body max-w-max">
+                        <p>Aqui vou deixar pequenos exemplos de como posso trabalhar</p>
+                        <div>
+    
+                            <button id="atividades" data-dropdown-toggle="dropdown-atividades"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                type="button">Selecione <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button>
+                            <div id="dropdown-atividades"
+                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="atividades">
                                     <li>
-                                        <h1 class="font-bold">Sistema de gerenciamento de pedido de socorro de veiculos
-                                        </h1>
-                                        <p class="ml-3">Nesse sistema, a parte da web, teve em 2 partes
-                                        <ul>
-                                            <li>
-                                                1º Administração
-                                                <p>Tinha acesso a tudo na plataforma, assim como cadastro em varios
-                                                    módulos,
-                                                    um mapa
-                                                    utilizando a ferramenta leaflet para verificar os prestadores mais
-                                                    proximos onde
-                                                    o cliente solicitou o pedido, e total controle sobre as empresas
-                                                    cadastradas
-                                                    para utilizar o serviço, tambem contando com um sistema de
-                                                    gerenciamento
-                                                    de
-                                                    pagamentos para as empresas atraves de APIs.</p>
-                                            </li>
-                                            <li>
-                                                2º Empresas
-                                                <p>A empresa que contratava os serviços tinha sua propria área de
-                                                    controler,
-                                                    onde
-                                                    poderia cadastrar, alterar e ver os seus clientes.</p>
-                                            </li>
-                                        </ul>
-                                        </p>
-                                        <p class="font-bold">Tecnologias utilizadas</p>
-                                        <div class="ml-3">
-                                            <p class="font-bold">Front-end:</p>
-                                            <p>HTML, CSS, Tailwind CSS, JavaScript, Jquery, DataTables</p>
-                                            <p class="font-bold">Back-end:</p>
-                                            <p>Laravel, PHP</p>
-                                            <p class="font-bold">Banco de dados:</p>
-                                            <p>MySQL</p>
-                                        </div>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                                     </li>
                                     <li>
-                                        <h1 class="font-bold">Desenvolvimento de aplicativo para o sistema de
-                                            gerenciamento
-                                            de
-                                            pedido de socorro de
-                                            veiculos - Mobile</h1>
-                                        <p class="ml-3">Desenvolvi para a empresa um aplicativo construido em react
-                                            native,
-                                            onde foi
-                                            dividido em
-                                            2 módulos.
-                                        <ul>
-                                            <li>
-                                                1º Cliente
-                                                <p>Onde o cliente poderia se cadastrar, escolher o plano para seu
-                                                    veiculo, e
-                                                    enviar
-                                                    uma foto de acordo com o plano, assim efetuar login e solicitar
-                                                    serviços,
-                                                    alterar seus dados, ver historico de serviços, serviços em
-                                                    andamento,
-                                                    cadastrar
-                                                    mais veiculos e ver suas cobranças.</p>
-                                            </li>
-                                            <li>
-                                                2º Prestadores de serviços
-                                                <p>Os prestadores de serviços pode se cadastrar pelo app, com seus dados
-                                                    e
-                                                    serviços
-                                                    que deseja prestar (de acordo com os serviços cadastrados na
-                                                    plataforma),
-                                                    poderia logar e aceitar serviços assim se solicitados.</p>
-                                            </li>
-                                        </ul>
-                                        </p>
-
-                                        <p class="font-bold">Tecnologias utilizadas</p>
-                                        <div class="ml-3">
-                                            <p class="font-bold">Front-end:</p>
-                                            <p>React native, JS, APIs Rest</p>
-                                        </div>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forms</a>
                                     </li>
                                     <li>
-                                        <h1 class="font-bold">Sistema de compra e venda de veiculos - Full stack</h1>
-                                        <p class="ml-3">Esse sistema servia como controler para os dados que iria
-                                            aparecer
-                                            no site
-                                            de vendas, e
-                                            aplicativo, podendo assim, cadastrar um cliente, veiculos, parceiros, tambem
-                                            contando
-                                            com uploads de fotos e arquivos.</p>
-                                        <p class="font-bold">Tecnologias utilizadas</p>
-                                        <div class="ml-3">
-                                            <p class="font-bold">Front-end:</p>
-                                            <p>HTML, CSS, Tailwind CSS, daisyUI, JavaScript, Jquery, DataTables</p>
-                                            <p class="font-bold">Back-end:</p>
-                                            <p>Laravel, PHP</p>
-                                            <p class="font-bold">Banco de dados:</p>
-                                            <p>MySQL</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h1 class="font-bold">Reconstrução do sistema de proteção veicular - Full stack
-                                        </h1>
-                                        <p class="ml-3">A empresa necessitava passar o sistema em que trabalhei durante
-                                            meu
-                                            estagio
-                                            para novas
-                                            tecnologias, e assim reconstruir o sistema que era basicamente um CRM da
-                                            empresa, com
-                                            muitas funcionalidades como cadastros de clientes e veiculos, controle de
-                                            financeiro,
-                                            controler de estoque e fiz parte dessa recriação de forma full stack,
-                                            criando
-                                            tanto
-                                            front-end, back-end e remodelando o banco de dados.</p>
-                                        <p class="font-bold">Tecnologias utilizadas</p>
-                                        <div class="ml-3">
-                                            <p class="font-bold">Front-end:</p>
-                                            <p>HTML, CSS, Tailwind CSS, JavaScript, Vue JS, Buefy</p>
-                                            <p class="font-bold">Back-end:</p>
-                                            <p>Laravel, PHP</p>
-                                            <p class="font-bold">Banco de dados:</p>
-                                            <p>MySQL</p>
-                                        </div>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tables</a>
                                     </li>
                                 </ul>
                             </div>
+    
+    
+                        </div>
+                    </div> -->
+                    <!-- Fim pagina 3 -->
+                    <!-- Pagina 1 -->
+                    <div id="nav-about" class="puff-in-center nav-body max-w-max">
+                        <p>
+                            Olá, sou um desenvolvedor full stack e também mobile, como experiencia de 2+ anos no
+                            mercado,
+                            trabalhando em mais de um projeto, front-end, back-end, e mobile. Bom em criar e utilizar
+                            componentes no front, trabalhar com classes e ORM e criar APIs no backend. Buscando sempre
+                            melhorar e
+                            adquirir novos conhecimentos para
+                            desenvolvimento tanto profissional quanto pessoal.
+                        </p>
+                    </div>
+                    <!-- Fim pagina 1 -->
+                    <!-- Pagina 2 -->
+                    <div id="nav-experience" class="hidden nav-body max-w-max">
+                        <div class="mb-5">
+                            <p class="font-bold">De forma resumida, tenho experiência prática no desenvolvimento de
+                                sistemas utilizando:</p>
+                            <p>HTML, CSS, JavaScript, Tailwind CSS, Vue.js, Bootstrap, PHP, Laravel.</p>
+                            <p class="font-bold">Atualmente, estou estudando e desenvolvendo minhas habilidades em
+                                projetos pessoais, utilizando:</p>
+                            <p>Golang (Gin e Gorm), Java (Spring Boot), Python (Django), C# (.Net), Electron.</p>
+                        </div>
+                        <div>
+                            <span class="font-bold">Experiência profissional</span>
+                            <div class="ml-3 h-[30vh] lg:h-[45vh] 2xl:h-[50vh] overflow-auto scroll-style">
+                                <div>
+                                    <p>No meu período de estágio, participei de um projeto de controle de empresa de
+                                        proteção veicular, onde o sistema tinha diversos módulos e necessitava de
+                                        manutenção, correção de bugs e aprimoramento. Ajudei a equipe a implementar
+                                        novos módulos e trabalhava tanto no front-end, back-end e banco de dados.</p>
+                                    <p class="font-bold">Tecnologias utilizadas:</p>
+                                    <div class="ml-3">
+                                        <p class="font-bold">Front-end:</p>
+                                        <p>HTML, CSS, Bootstrap 4, JavaScript, jQuery, DataTables.</p>
+                                        <p class="font-bold">Back-end:</p>
+                                        <p>PHP.</p>
+                                        <p class="font-bold">Banco de dados:</p>
+                                        <p>MySQL.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h1 class="font-bold">Como desenvolvedor full stack, fiz parte do desenvolvimento de
+                                        3 sistemas para a empresa:</h1>
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <h1 class="font-bold">Sistema de gerenciamento de pedido de socorro de
+                                                veículos</h1>
+                                            <p class="ml-3">Nesse sistema, a parte web foi dividida em 2 partes:</p>
+                                            <ul>
+                                                <li>
+                                                    1º Administração
+                                                    <p>Tinha acesso a todas as funcionalidades da plataforma, assim como
+                                                        cadastro em vários módulos, um mapa utilizando a ferramenta
+                                                        Leaflet para verificar os prestadores mais próximos do local
+                                                        onde o cliente solicitou o pedido, e total controle sobre as
+                                                        empresas cadastradas para utilizar o serviço. Também contava com
+                                                        um sistema de gerenciamento de pagamentos para as empresas
+                                                        através de APIs.</p>
+                                                </li>
+                                                <li>
+                                                    2º Empresas
+                                                    <p>A empresa que contratava os serviços tinha sua própria área de
+                                                        controle, onde poderia cadastrar, alterar e ver os seus
+                                                        clientes.</p>
+                                                </li>
+                                            </ul>
+                                            <p class="font-bold">Tecnologias utilizadas:</p>
+                                            <div class="ml-3">
+                                                <p class="font-bold">Front-end:</p>
+                                                <p>HTML, CSS, Tailwind CSS, JavaScript, jQuery, DataTables.</p>
+                                                <p class="font-bold">Back-end:</p>
+                                                <p>Laravel, PHP.</p>
+                                                <p class="font-bold">Banco de dados:</p>
+                                                <p>MySQL.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h1 class="font-bold">Desenvolvimento de aplicativo para o sistema de
+                                                gerenciamento de pedido de socorro de veículos - Mobile</h1>
+                                            <p class="ml-3">Desenvolvi para a empresa um aplicativo construído em React
+                                                Native, que foi dividido em 2 módulos:</p>
+                                            <ul>
+                                                <li>
+                                                    1º Cliente
+                                                    <p>Onde o cliente poderia se cadastrar, escolher o plano para seu
+                                                        veículo, enviar uma foto de acordo com o plano, efetuar login e
+                                                        solicitar serviços, alterar seus dados, ver histórico de
+                                                        serviços, serviços em andamento, cadastrar mais veículos e ver
+                                                        suas cobranças.</p>
+                                                </li>
+                                                <li>
+                                                    2º Prestadores de serviços
+                                                    <p>Os prestadores de serviços podiam se cadastrar pelo aplicativo,
+                                                        fornecendo seus dados e os serviços que desejavam prestar (de
+                                                        acordo com os serviços cadastrados na plataforma). Podiam fazer
+                                                        login e aceitar serviços quando solicitados.</p>
+                                                </li>
+                                            </ul>
+                                            <p class="font-bold">Tecnologias utilizadas:</p>
+                                            <div class="ml-3">
+                                                <p class="font-bold">Front-end:</p>
+                                                <p>React Native, JavaScript, APIs Rest.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h1 class="font-bold">Sistema de compra e venda de veículos - Full stack
+                                            </h1>
+                                            <p class="ml-3">Esse sistema servia como controlador para os dados que iriam
+                                                aparecer no site de vendas e no aplicativo, possibilitando cadastrar um
+                                                cliente, veículos, parceiros, também contando com uploads de fotos e
+                                                arquivos.</p>
+                                            <p class="font-bold">Tecnologias utilizadas:</p>
+                                            <div class="ml-3">
+                                                <p class="font-bold">Front-end:</p>
+                                                <p>HTML, CSS, Tailwind CSS, daisyUI, JavaScript, jQuery, DataTables.</p>
+                                                <p class="font-bold">Back-end:</p>
+                                                <p>Laravel, PHP.</p>
+                                                <p class="font-bold">Banco de dados:</p>
+                                                <p>MySQL.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h1 class="font-bold">Reconstrução do sistema de proteção veicular - Full
+                                                stack</h1>
+                                            <p class="ml-3">A empresa necessitava atualizar o sistema no qual trabalhei
+                                                durante meu estágio para novas tecnologias e, assim, reconstruir o
+                                                sistema, que era basicamente um CRM da empresa, com muitas
+                                                funcionalidades como cadastro de clientes e veículos, controle
+                                                financeiro, controlador de estoque. Fiz parte dessa recriação atuando
+                                                como desenvolvedor full stack, criando tanto o front-end quanto o
+                                                back-end e remodelando o banco de dados.</p>
+                                            <p class="font-bold">Tecnologias utilizadas:</p>
+                                            <div class="ml-3">
+                                                <p class="font-bold">Front-end:</p>
+                                                <p>HTML, CSS, Tailwind CSS, JavaScript, Vue.js, Buefy.</p>
+                                                <p class="font-bold">Back-end:</p>
+                                                <p>Laravel, PHP.</p>
+                                                <p class="font-bold">Banco de dados:</p>
+                                                <p>MySQL.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- Fim pagina 2 -->
                 </div>
-                <!-- Fim pagina 2 -->
+
             </div>
+        </main>
+        <footer class="w-full mx-auto max-w-screen-2xl py-5 fixed bottom-0">
+            <div class="flex justify-end pr-2">
+                <!-- social - start -->
+                <div class="flex flex-col lg:flex lg:flex-row gap-4 justify-center ">
 
-        </div>
-    </main>
-    <footer class="w-full mx-auto max-w-screen-2xl px-4 md:px-8 fixed bottom-0">
-        <div class="flex justify-center">
-            <!-- social - start -->
-            <div class="flex gap-4 justify-center">
+                    <a href="https://www.linkedin.com/in/rodrigo-barbosa-bertini/" target="_blank"
+                        class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                        <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
 
-                <a href="https://www.linkedin.com/in/rodrigo-barbosa-bertini/" target="_blank"
-                    class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-                    <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                </a>
-
-                <a href="https://github.com/Rodbber" target="_blank"
-                    class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-                    <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                </a>
+                    <a href="https://github.com/Rodbber" target="_blank"
+                        class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+                        <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- social - end -->
             </div>
-            <!-- social - end -->
-        </div>
-    </footer>
+        </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     <script type="module">
         document.getElementById('hello').classList.add('text-pop-up-top')
