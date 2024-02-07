@@ -27,7 +27,7 @@
             }
 
             100% {
-                transform: translateY(-200px);
+                transform: translateY(-300px);
                 transform-origin: 50% 50%;
                 text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 2px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 50px 30px rgba(0, 0, 0, .3)
             }
@@ -268,7 +268,7 @@
     <div class="h-screen w-screen">
         <main class="flex flex-col items-center text-white flex-1">
             <div class="text-xl mt-10">
-                <span class="text-blue-300">class</span> Rodrigo {
+                <span class="text-blue-300">class</span> Developer {
                 <div>
                     <p class="ml-7">
                         <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> nome =
@@ -278,6 +278,10 @@
                     <p class="ml-7">
                         <span class="text-blue-300">private</span> <span class="text-blue-300">string</span> ocupacao =
                         "Desenvolvedor full stack";
+                    </p>
+                    <p class="ml-7">
+                        <span class="text-blue-300">public</span> <span class="text-blue-300">string</span> observation =
+                        "Esse portifólio é antigo, logo lançarei um novo, com novo design e mais detalhado.";
                     </p>
                 </div>
                 }
@@ -293,9 +297,6 @@
                             mim</a>
                         <a id="experience" href="#"
                             class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Experiencias</a>
-                        <!-- <a id="fazer" href="#"
-                            class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">O
-                            que posso fazer</a> -->
                         <a id="contato" href="#"
                             class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700 nav">Contatos</a>
                     </nav>
@@ -313,45 +314,11 @@
                         </div>
                     </div>
                     <!-- Fim pagina 4 -->
-                    <!-- Pagina 3 -->
-                    <!-- <div id="nav-fazer" class="hidden nav-body max-w-max">
-                        <p>Aqui vou deixar pequenos exemplos de como posso trabalhar</p>
-                        <div>
-    
-                            <button id="atividades" data-dropdown-toggle="dropdown-atividades"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                type="button">Selecione <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg></button>
-                            <div id="dropdown-atividades"
-                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="atividades">
-                                    <li>
-                                        <a href="#"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forms</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-    
-    
-                        </div>
-                    </div> -->
-                    <!-- Fim pagina 3 -->
                     <!-- Pagina 1 -->
                     <div id="nav-about" class="puff-in-center nav-body max-w-max w-[80vw]">
                         <p>
                             Olá, sou um entusiasmado desenvolvedor full stack, apaixonado por tecnologia e com
-                            mais de 2 anos de jornada no desenvolvimento web. Minha experiência abrange uma ampla gama
+                            mais de 3 anos de jornada no desenvolvimento web. Minha experiência abrange uma ampla gama
                             de habilidades, desde a criação de back-ends robustos usando Laravel e PHP até a elaboração
                             de interfaces de usuário intuitivas com HTML, CSS, Tailwind, Bootstrap e Vuejs. Além disso,
                             ja desenvolvi e estudo a area de aplicativos mobile utilizando React native e Flutter.
@@ -366,10 +333,7 @@
                             inovadoras
                             e contribuir para o sucesso de cada projeto que abraço. Vamos criar algo incrível juntos!
                         </p>
-                    </div>
-                    <!-- Fim pagina 1 -->
-                    <!-- Pagina 2 -->
-                    <div id="nav-experience" class="hidden nav-body max-w-max w-[80vw]">
+                        <br>
                         <div class="mb-5">
                             <p class="font-bold">De forma resumida, tenho experiência prática no desenvolvimento de
                                 sistemas utilizando:</p>
@@ -377,17 +341,41 @@
                             <p class="font-bold">Atualmente, estou estudando e desenvolvendo minhas habilidades em
                                 projetos pessoais, utilizando:</p>
                             <p>Golang (Gin e Gorm), Java (Spring Boot), Python (Django), C# (.Net), Electron.</p>
-                            <div class="flex justify-end">
-                                <span class="text-xs text-right cursor-pointer shake-horizontal"
-                                    id="example-colapse">clique no
-                                    titulo para ver
-                                    os detalhes</span>
-                            </div>
+                            
 
+                        </div>
+                    </div>
+                    <!-- Fim pagina 1 -->
+                    <!-- Pagina 2 -->
+                    <div id="nav-experience" class="hidden nav-body max-w-max w-[80vw]">
+                        
+                        <div class="flex justify-end">
+                            <span class="text-xs text-right cursor-pointer shake-horizontal"
+                                id="example-colapse">clique no
+                                titulo para ver
+                                os detalhes</span>
                         </div>
                         <div class="w-[80vw]">
                             <span class="font-bold">Experiência profissional</span>
                             <div class="ml-3 h-[30vh] lg:h-[45vh] 2xl:h-[50vh] overflow-auto scroll-style w-full">
+                                <div>
+                                    <h1 class="font-bold cursor-pointer xp-title">Desenvolvedor Full Stack - RW Interactive</h1>
+                                    <p class="ml-3 xp-body swing-in-top-fwd">Nessa empresa participei de 2 projetos internacionais <br>
+                                    - wein.plus: Um sistema Tipo ERP SaaS, para controle e distribuição no comercio de vinhos online, com sua sede na Alemanhã. Fui responsavel por dar manutenção e corrigir bugs no codigo e adicionar novas features em alguns modulos do projeto. Desenvolvi diversas habilidades como criação de códigos mais elaborados e clean code, uso de docker, além de trabalhar com o metodo kanban e scrum.<br>
+                                    - NY Certified Peer Specialist: Nesse projeto, um sistema de gerenciamento de certificados para profissionais na area da saude mental. Fui responsavel por desenvolver módulos, corrigir bugs e dar manutenção. Desenvolvi diversas habilidades com o uso do laravel com Jobs, Services, Events, e mais clean code.
+                                    </p>
+                                    <p class="font-bold">Tecnologias utilizadas:</p>
+                                    <div class="ml-3">
+                                        <p class="font-bold">Front-end:</p>
+                                        <p>HTML, CSS, Bootstrap 5, JavaScript, React.</p>
+                                        <p class="font-bold">Back-end:</p>
+                                        <p>PHP, Laravel.</p>
+                                        <p class="font-bold">Banco de dados:</p>
+                                        <p>MySQL.</p>
+                                        <p class="font-bold">Ferramenta de desenvolvimento:</p>
+                                        <p>Docker.</p>
+                                    </div>
+                                </div>
                                 <div>
                                     <h1 class="font-bold cursor-pointer xp-title">Realizei um estagio de mais de 6 meses
                                         como desenvolvedor na empresa UNICONN onde participei do desenvolvimento e
