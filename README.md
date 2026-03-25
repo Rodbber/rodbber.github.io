@@ -1,4 +1,4 @@
-# Portfolio — Rodrigo Bber
+# Portfolio — Rodrigo Bertini
 
 Personal portfolio built with Vue 3, showcasing projects, experience, and technical skills. Available in **English** and **Portuguese (pt-BR)** with light/dark theme support.
 
