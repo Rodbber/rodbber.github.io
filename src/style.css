@@ -1,0 +1,69 @@
+@import 'primeicons/primeicons.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PrimeVue dark mode overrides */
+.dark .p-dropdown,
+.dark .p-dropdown-panel {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.dark .p-dropdown:not(.p-disabled):hover {
+  border-color: #4b5563;
+}
+
+.dark .p-dropdown-label {
+  color: #d1d5db;
+}
+
+.dark .p-dropdown-trigger {
+  color: #9ca3af;
+}
+
+.dark .p-dropdown-panel .p-dropdown-items-wrapper {
+  background-color: #1f2937;
+}
+
+.dark .p-dropdown-panel .p-dropdown-item {
+  color: #d1d5db;
+}
+
+.dark .p-dropdown-panel .p-dropdown-item:hover,
+.dark .p-dropdown-panel .p-dropdown-item.p-highlight {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.dark .p-dialog {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+.dark .p-dialog .p-dialog-header {
+  background-color: #1f2937;
+  border-bottom-color: #374151;
+  color: #f9fafb;
+}
+
+.dark .p-dialog .p-dialog-content {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+.dark .p-dialog .p-dialog-header-icon {
+  color: #9ca3af;
+}
+
+.dark .p-dialog .p-dialog-header-icon:hover {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.dark .p-dialog-mask.p-component-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
